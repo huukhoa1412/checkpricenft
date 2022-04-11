@@ -1,3 +1,2 @@
-telepot
-requests
-json
+telepot~=12.7
+requests~=2.26.0
