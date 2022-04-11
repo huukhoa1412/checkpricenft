@@ -1,0 +1,9 @@
+{
+    "name": "Check_gia_box,
+    "description": "A bot to forward msg from one tg channel/group to another easily",
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
