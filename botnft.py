@@ -44,7 +44,7 @@ def action(msg):
     print('Received: %s' % command)
 
     # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
-    if command == '/p':
+    if command == '/nft':
         items_the_s1 = send_req(3,109191979564517376)
         items_box_s1 = send_req(2,109191979564517376)
         items_the_s2 = send_req(3,155499473454738432)
