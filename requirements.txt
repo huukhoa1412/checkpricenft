@@ -1,4 +1,1 @@
 telepot
-json
-time
-requests
