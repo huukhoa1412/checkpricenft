@@ -37,7 +37,8 @@ def send_req(id,seial):
     return result
 
 def action(msg):
-    chat_id = '2002320248'
+    content_type, chat_type, chat_id = telepot.glance(msg)
+    print('Chat:', content_type, chat_type, chat_id)
     command = msg['text']
 
     print('Received: %s' % command)
