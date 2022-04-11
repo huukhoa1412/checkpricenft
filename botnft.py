@@ -62,7 +62,7 @@ def action(msg):
         print(f"S2: R {price_the_s2} | Box {price_box_s2}")
         print(f"S3: R {price_the_s3} | Box {price_box_s3}")
 
-telegram_bot = telepot.Bot('5175449048:AAHAFfjb5fGV5p89MpDwmMNK6LdjSog3oUc')
+telegram_bot = telepot.Bot('5175449048:AAFIIea7BlD1TH5xiNtl1ZPizkblrkN1rN0')
 print((telegram_bot.getMe()))
 
 MessageLoop(telegram_bot, action).run_as_thread()
