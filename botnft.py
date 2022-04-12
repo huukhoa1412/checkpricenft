@@ -64,7 +64,7 @@ def action(msg):
         while (loai_the_sr1 > 1):
             i = i + 1   
             loai_the_sr1= items_the_sr1[i]['rarity']
-        print(f"sr1 {i}")     
+        #print(f"sr1 {i}")     
         donvi_the_sr1 = items_the_sr1[i]['currency']
         price_the_sr1 = items_the_sr1[i]['amount']
         #RSS box S1
@@ -74,7 +74,7 @@ def action(msg):
         while (loai_the_ssr1 > 0):
             j = j + 1 
             loai_the_ssr1= items_the_ssr1[j]['rarity']
-        print(f"ssr1 {j}")     
+        #print(f"ssr1 {j}")     
         donvi_the_ssr1 = items_the_ssr1[j]['currency']
         price_the_ssr1 = items_the_ssr1[j]['amount']
         #SSR box S1            
@@ -97,7 +97,7 @@ def action(msg):
         while (loai_the_sr2 > 1):
             i = i + 1 
             loai_the_sr2= items_the_sr2[i]['rarity']
-        print(f"sr2 {i}")    
+        #print(f"sr2 {i}")    
         donvi_the_sr2 = items_the_sr2[i]['currency']
         price_the_sr2 = items_the_sr2[i]['amount']
         #RSS box S2
@@ -107,7 +107,7 @@ def action(msg):
         while (loai_the_ssr2 > 0):
             j = j + 1
             loai_the_ssr2 = items_the_ssr2[j]['rarity']
-        print(f"ssr2 {j}")    
+        #print(f"ssr2 {j}")    
         donvi_the_ssr2 = items_the_ssr2[j]['currency']
         price_the_ssr2 = items_the_ssr2[j]['amount']
         #SSR box S2
@@ -130,7 +130,7 @@ def action(msg):
         while (loai_the_sr3 > 1):
             i = i + 1
             loai_the_sr3 = items_the_sr3[i]['rarity']
-        print(f"sr3 {i}")    
+        #print(f"sr3 {i}")    
         donvi_the_sr3 = items_the_sr3[i]['currency']
         price_the_sr3 = items_the_sr3[i]['amount']
         #RSS box S2
@@ -140,7 +140,7 @@ def action(msg):
         while (loai_the_ssr3 > 0):
             j = j + 1    
             loai_the_ssr3= items_the_ssr3[j]['rarity']
-        print(f"ssr3 {j}")    
+        #print(f"ssr3 {j}")    
         donvi_the_ssr3 = items_the_ssr3[j]['currency']
         price_the_ssr3 = items_the_ssr3[j]['amount']
         #SSR box S2         
