@@ -58,8 +58,8 @@ def action(msg):
         trang = 5
         while (loai_the_sr1 > 1):
             i = i + 1
-            if i >15:
-                trang = trang +1
+            if ( i > 15):
+                trang = trang + 1
                 i = 0
             items_the_sr1 = send_req(trang,3,109191979564517376)   
             loai_the_sr1= items_the_sr1[i]['rarity']
@@ -68,8 +68,13 @@ def action(msg):
         items_the_ssr1 = send_req(6,3,109191979564517376)
         loai_the_ssr1 = 1
         j = 0
+        trang = 6
         while (loai_the_ssr1 > 0):
             j = j + 1
+            if (j > 15):
+                trang = trang + 1
+                j = 0
+            items_the_ssr1 = send_req(trang,3,109191979564517376)     
             loai_the_ssr1= items_the_ssr1[j]['rarity']
             price_the_ssr1 = items_the_ssr1[j]['amount']
         #SSR box S1     
