@@ -70,7 +70,7 @@ def action(msg):
         #RSS box S1
         items_the_ssr1 = send_req(2,3,109191979564517376)
         loai_the_ssr1 = 1
-        j = 0
+        j = 20
         while (loai_the_ssr1 > 0):
             j = j + 1 
             loai_the_ssr1= items_the_ssr1[j]['rarity']
@@ -103,7 +103,7 @@ def action(msg):
         #RSS box S2
         items_the_ssr2 = send_req(2,3,155499473454738432)
         loai_the_ssr2 = 1
-        j = 0
+        j = 20
         while (loai_the_ssr2 > 0):
             j = j + 1
             loai_the_ssr2 = items_the_ssr2[j]['rarity']
@@ -136,7 +136,7 @@ def action(msg):
         #RSS box S2
         items_the_ssr3 = send_req(4,3,180885755495849984)
         loai_the_ssr3 = 1
-        j = 0
+        j = 20
         while (loai_the_ssr3 > 0):
             j = j + 1    
             loai_the_ssr3= items_the_ssr3[j]['rarity']
