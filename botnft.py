@@ -55,8 +55,13 @@ def action(msg):
         items_the_sr1 = send_req(5,3,109191979564517376)
         loai_the_sr1 = 2
         i = 0
+        trang = 5
         while (loai_the_sr1 > 1):
             i = i + 1
+            if i >15:
+                trang = trang +1
+                i = 0
+             items_the_sr1 = send_req(trang,3,109191979564517376)   
             loai_the_sr1= items_the_sr1[i]['rarity']
             price_the_sr1 = items_the_sr1[i]['amount']
         #RSS box S1
