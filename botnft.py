@@ -64,6 +64,7 @@ def action(msg):
         while (loai_the_sr1 > 1):
             i = i + 1   
             loai_the_sr1= items_the_sr1[i]['rarity']
+        print(f"sr1 {i}")     
         donvi_the_sr1 = items_the_sr1[i]['currency']
         price_the_sr1 = items_the_sr1[i]['amount']
         #RSS box S1
@@ -73,6 +74,7 @@ def action(msg):
         while (loai_the_ssr1 > 0):
             j = j + 1 
             loai_the_ssr1= items_the_ssr1[j]['rarity']
+        print(f"ssr1 {j}")     
         donvi_the_ssr1 = items_the_ssr1[j]['currency']
         price_the_ssr1 = items_the_ssr1[j]['amount']
         #SSR box S1            
@@ -95,6 +97,7 @@ def action(msg):
         while (loai_the_sr2 > 1):
             i = i + 1 
             loai_the_sr2= items_the_sr2[i]['rarity']
+        print(f"sr2 {i}")    
         donvi_the_sr2 = items_the_sr2[i]['currency']
         price_the_sr2 = items_the_sr2[i]['amount']
         #RSS box S2
@@ -104,6 +107,7 @@ def action(msg):
         while (loai_the_ssr2 > 0):
             j = j + 1
             loai_the_ssr2 = items_the_ssr2[j]['rarity']
+        print(f"ssr2 {j}")    
         donvi_the_ssr2 = items_the_ssr2[j]['currency']
         price_the_ssr2 = items_the_ssr2[j]['amount']
         #SSR box S2
@@ -126,6 +130,7 @@ def action(msg):
         while (loai_the_sr3 > 1):
             i = i + 1
             loai_the_sr3 = items_the_sr3[i]['rarity']
+        print(f"sr3 {i}")    
         donvi_the_sr3 = items_the_sr3[i]['currency']
         price_the_sr3 = items_the_sr3[i]['amount']
         #RSS box S2
@@ -135,12 +140,10 @@ def action(msg):
         while (loai_the_ssr3 > 0):
             j = j + 1    
             loai_the_ssr3= items_the_ssr3[j]['rarity']
+        print(f"ssr3 {j}")    
         donvi_the_ssr3 = items_the_ssr3[j]['currency']
         price_the_ssr3 = items_the_ssr3[j]['amount']
         #SSR box S2         
-        print(f"S1: R {price_the_r1} {donvi_the_r1} | SR {price_the_sr1} {donvi_the_sr1}| SSR {price_the_ssr1} {donvi_the_ssr1}| Box {price_box_s1} {donvi_box_r1}")     
-        print(f"S2: R {price_the_r2} {donvi_the_r2} | SR {price_the_sr2} {donvi_the_sr2}| SSR {price_the_ssr2} {donvi_the_ssr2}| Box {price_box_s2} {donvi_box_r2}")
-        print(f"S3: R {price_the_r3} {donvi_the_r3} | SR {price_the_sr3}  {donvi_the_sr3}| SSR {price_the_ssr3} {donvi_the_ssr3}| Box {price_box_s3} {donvi_box_r3}") 
 
         telegram_bot.sendMessage (chat_id, f"S1: R {price_the_r1} {donvi_the_r1}| SR {price_the_sr1} {donvi_the_sr1}| SSR {price_the_ssr1} {donvi_the_ssr1}| Box {price_box_s1} {donvi_box_r1} \nS2: R {price_the_r2} {donvi_the_r2}| SR {price_the_sr2} {donvi_the_sr2}| SSR {price_the_ssr2} {donvi_the_ssr2}| Box {price_box_s2} {donvi_box_r2} \nS3: R {price_the_r3} {donvi_the_r3}| SR {price_the_sr3} {donvi_the_sr3}| SSR {price_the_ssr3} {donvi_the_ssr3}| Box {price_box_s3} {donvi_box_r3}\n")
 
@@ -152,5 +155,5 @@ MessageLoop(telegram_bot, action).run_as_thread()
 print('Up and Running....')
 
 while 1:
-    time.sleep(10)
+    time.sleep(1)
 
