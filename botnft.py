@@ -64,8 +64,8 @@ def action(msg):
         while (loai_the_sr1 > 1):
             i = i + 1   
             loai_the_sr1= items_the_sr1[i]['rarity']
-            donvi_the_sr1 = items_the_sr1[i]['currency']
-            price_the_sr1 = items_the_sr1[i]['amount']
+        donvi_the_sr1 = items_the_sr1[i]['currency']
+        price_the_sr1 = items_the_sr1[i]['amount']
         #RSS box S1
         items_the_ssr1 = send_req(2,3,109191979564517376)
         loai_the_ssr1 = 1
@@ -73,8 +73,8 @@ def action(msg):
         while (loai_the_ssr1 > 0):
             j = j + 1 
             loai_the_ssr1= items_the_ssr1[j]['rarity']
-            donvi_the_ssr1 = items_the_ssr1[j]['currency']
-            price_the_ssr1 = items_the_ssr1[j]['amount']
+        donvi_the_ssr1 = items_the_ssr1[j]['currency']
+        price_the_ssr1 = items_the_ssr1[j]['amount']
         #SSR box S1            
     #Box S2
         #R box S2
@@ -95,8 +95,8 @@ def action(msg):
         while (loai_the_sr2 > 1):
             i = i + 1 
             loai_the_sr2= items_the_sr2[i]['rarity']
-            donvi_the_sr2 = items_the_sr2[i]['currency']
-            price_the_sr2 = items_the_sr2[i]['amount']
+        donvi_the_sr2 = items_the_sr2[i]['currency']
+        price_the_sr2 = items_the_sr2[i]['amount']
         #RSS box S2
         items_the_ssr2 = send_req(2,3,155499473454738432)
         loai_the_ssr2 = 1
@@ -104,8 +104,8 @@ def action(msg):
         while (loai_the_ssr2 > 0):
             j = j + 1
             loai_the_ssr2 = items_the_ssr2[j]['rarity']
-            donvi_the_ssr2 = items_the_ssr2[j]['currency']
-            price_the_ssr2 = items_the_ssr2[j]['amount']
+        donvi_the_ssr2 = items_the_ssr2[j]['currency']
+        price_the_ssr2 = items_the_ssr2[j]['amount']
         #SSR box S2
       #Box S3
         #R box S2
@@ -126,8 +126,8 @@ def action(msg):
         while (loai_the_sr3 > 1):
             i = i + 1
             loai_the_sr3 = items_the_sr3[i]['rarity']
-            donvi_the_sr3 = items_the_sr3[i]['currency']
-            price_the_sr3 = items_the_sr3[i]['amount']
+        donvi_the_sr3 = items_the_sr3[i]['currency']
+        price_the_sr3 = items_the_sr3[i]['amount']
         #RSS box S2
         items_the_ssr3 = send_req(4,3,180885755495849984)
         loai_the_ssr3 = 1
@@ -135,8 +135,8 @@ def action(msg):
         while (loai_the_ssr3 > 0):
             j = j + 1    
             loai_the_ssr3= items_the_ssr3[j]['rarity']
-            donvi_the_ssr3 = items_the_ssr3[j]['currency']
-            price_the_ssr3 = items_the_ssr3[j]['amount']
+        donvi_the_ssr3 = items_the_ssr3[j]['currency']
+        price_the_ssr3 = items_the_ssr3[j]['amount']
         #SSR box S2         
         print(f"S1: R {price_the_r1} {donvi_the_r1} | SR {price_the_sr1} {donvi_the_sr1}| SSR {price_the_ssr1} {donvi_the_ssr1}| Box {price_box_s1} {donvi_box_r1}")     
         print(f"S2: R {price_the_r2} {donvi_the_r2} | SR {price_the_sr2} {donvi_the_sr2}| SSR {price_the_ssr2} {donvi_the_ssr2}| Box {price_box_s2} {donvi_box_r2}")
