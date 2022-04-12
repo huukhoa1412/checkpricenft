@@ -10,7 +10,7 @@ def send_req(trang,id,seial):
     url = 'https://www.binance.com/bapi/nft/v1/public/nft/market-mystery/mystery-list'
     pre_result = []
     req_data = {"page": trang,
-                    "size": 50,
+                    "size": 60,
                     "params":
                         {
                             "keyword": "",
