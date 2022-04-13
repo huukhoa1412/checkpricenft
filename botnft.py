@@ -44,7 +44,7 @@ def action(msg):
     print('Received: %s' % command)
 
     # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
-    if command == '/n':
+    if command == '/n' and command == '/n@xabang_bot':
     #Box S1
         #R box S1
         items_the_r1 = send_req(1,3,109191979564517376)
