@@ -77,14 +77,14 @@ def action(msg):
             price_the_r1 = items_the_s1[0]['amount']
             loai = items_the_s1[i]['rarity']
             if (loai == 2):
-                total_s1 += 1 
+                #total_s1 += 1 
             if (loai == 1):
-                total_sr1 += 1
+               # total_sr1 += 1
                 if check_sr1 == 0:
                     price_the_sr1 = items_the_s1[i]['amount']
                     check_sr1 = 1
             if (loai == 0):
-                total_ssr1 += 1
+                #total_ssr1 += 1
                 if check_ssr1 == 0:
                     price_the_ssr1 = items_the_s1[i]['amount']
                     check_ssr1 = 1          
@@ -92,14 +92,14 @@ def action(msg):
             price_the_r2 = items_the_s2[0]['amount']
             loai =  items_the_s2[i]['rarity']
             if (loai == 2):
-                total_s2 += 1 
+                #total_s2 += 1 
             if (loai == 1):
-                total_sr2 += 1
+                #total_sr2 += 1
                 if check_sr2 == 0:
                     price_the_sr2 = items_the_s2[i]['amount']
                     check_sr2 = 1
             if (loai == 0):
-                total_ssr2 += 1
+                #total_ssr2 += 1
                 if check_ssr2 == 0:
                     price_the_ssr2 = items_the_s2[i]['amount']
                     check_ssr2 = 1
@@ -107,14 +107,14 @@ def action(msg):
             price_the_r3 = items_the_s3[0]['amount']
             loai =  items_the_s3[i]['rarity']
             if (loai == 2):
-                total_s3 += 1 
+                #total_s3 += 1 
             if (loai == 1):
-                total_sr3 += 1
+                #total_sr3 += 1
                 if check_sr3 == 0:
                     price_the_sr3 = items_the_s3[i]['amount']
                     check_sr3 = 1
             if (loai == 0):
-                total_ssr3 += 1
+                #total_ssr3 += 1
                 if check_ssr3 == 0:
                     price_the_ssr3 = items_the_s3[i]['amount']
                     check_ssr3 = 1          
