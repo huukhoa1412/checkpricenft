@@ -49,7 +49,7 @@ def action(msg):
 
     # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
     if command == '/n' or command == '/n@xabang_bot' or command == '/nft' or command == '/nfts':
-    items_the_s1 = send_req(3,109191979564517376)
+        items_the_s1 = send_req(3,109191979564517376)
         items_box_s1 = send_req(2,109191979564517376)
         price_box_s1 = items_box_s1[0]['amount']
         items_the_s2 = send_req(3,155499473454738432)
