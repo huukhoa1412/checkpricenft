@@ -76,7 +76,7 @@ def action(msg):
         for i in range(len(items_the_s1)):
             price_the_r1 = items_the_s1[0]['amount']
             loai = items_the_s1[i]['rarity']
-            if (loai == 2):
+            #if (loai == 2):
                 #total_s1 += 1 
             if (loai == 1):
                # total_sr1 += 1
@@ -91,7 +91,7 @@ def action(msg):
         for i in range(len(items_the_s2)):
             price_the_r2 = items_the_s2[0]['amount']
             loai =  items_the_s2[i]['rarity']
-            if (loai == 2):
+            #if (loai == 2):
                 #total_s2 += 1 
             if (loai == 1):
                 #total_sr2 += 1
@@ -106,7 +106,7 @@ def action(msg):
         for i in range(len(items_the_s3)):
             price_the_r3 = items_the_s3[0]['amount']
             loai =  items_the_s3[i]['rarity']
-            if (loai == 2):
+            #if (loai == 2):
                 #total_s3 += 1 
             if (loai == 1):
                 #total_sr3 += 1
