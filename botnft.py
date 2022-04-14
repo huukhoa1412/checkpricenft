@@ -58,8 +58,8 @@ def action(msg):
         items_box_s2 = send_req(2,2,155499473454738432)
         price_box_s2 = items_box_s2[0]['amount']
         price_the_r2 = items_the_s2[0]['amount'] 
-        items_the_s3 = send_req(2,3,180885755495849984)
-        items_box_s3 = send_req(2,2,180885755495849984)
+        items_the_s3 = send_req(3,3,180885755495849984)
+        items_box_s3 = send_req(3,2,180885755495849984)
         price_box_s3 = items_box_s3[0]['amount']
         price_the_r3 = items_the_s3[0]['amount'] 
         loai_s1 = []
