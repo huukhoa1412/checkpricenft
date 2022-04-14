@@ -88,17 +88,17 @@ def action(msg):
         
         #Total S-SR-SSR
         #Box S1
-        total_s1=loai_s1.count(2)
-        total_sr1=loai_s1.count(1)
-        total_ssr1=loai_s1.count(0)
+        #total_s1=loai_s1.count(2)
+        #total_sr1=loai_s1.count(1)
+        #total_ssr1=loai_s1.count(0)
         #Box S2
-        total_s2=loai_s2.count(2)
-        total_sr2=loai_s2.count(1)
-        total_ssr2=loai_s2.count(0)
+        #total_s2=loai_s2.count(2)
+        #total_sr2=loai_s2.count(1)
+        #total_ssr2=loai_s2.count(0)
         #Box S3
-        total_s3=loai_s3.count(2)
-        total_sr3=loai_s3.count(1)
-        total_ssr3=loai_s3.count(0)
+        #total_s3=loai_s3.count(2)
+        #total_sr3=loai_s3.count(1)
+        #total_ssr3=loai_s3.count(0)
         
         #Price S-SR-SSR
         #Box S1
