@@ -6,11 +6,11 @@ from telepot.loop import MessageLoop
 from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
 
 
-def send_req(id,seial):
+def send_req(max,id,seial):
     url = 'https://www.binance.com/bapi/nft/v1/public/nft/market-mystery/mystery-list'
     pre_result = []
 
-    for i in range(1, 4):
+    for i in range(1, max):
 
         req_data = {"page": i,
                     "size": 100,
@@ -45,79 +45,72 @@ def action(msg):
     print('Chat:', content_type, chat_type, chat_id)
     command = msg['text']
 
-    print('Received: %s' % command)
+    #print('Received: %s' % command)
 
     # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
     if command == '/n' or command == '/n@xabang_bot' or command == '/nft' or command == '/nfts':
-        items_the_s1 = send_req(3,109191979564517376)
-        items_box_s1 = send_req(2,109191979564517376)
+        #Box S1
+        items_the_s1 = send_req(2,3,109191979564517376)
+        items_box_s1 = send_req(2,2,109191979564517376)
         price_box_s1 = items_box_s1[0]['amount']
-        items_the_s2 = send_req(3,155499473454738432)
-        items_box_s2 = send_req(2,155499473454738432)
+        price_the_r1 = items_the_s1[0]['amount'] 
+        items_the_s2 = send_req(2,3,155499473454738432)
+        items_box_s2 = send_req(2,2,155499473454738432)
         price_box_s2 = items_box_s2[0]['amount']
-        items_the_s3 = send_req(3,180885755495849984)
-        items_box_s3 = send_req(2,180885755495849984)
+        price_the_r2 = items_the_s2[0]['amount'] 
+        items_the_s3 = send_req(2,3,180885755495849984)
+        items_box_s3 = send_req(2,2,180885755495849984)
         price_box_s3 = items_box_s3[0]['amount']
-        total_s1 = 0
-        total_sr1 = 0
-        check_sr1 = 0
-        total_ssr1 = 0
-        check_ssr1 = 0
-        total_s2 = 0
-        total_sr2 = 0
-        check_sr2 = 0
-        total_ssr2 = 0
-        check_ssr2 = 0
-        total_s3 = 0
-        total_sr3 = 0
-        check_sr3 = 0
-        total_ssr3 = 0
-        check_ssr3 = 0
+        price_the_r3 = items_the_s3[0]['amount'] 
+        loai_s1 = []
+        loai_s2 = []
+        loai_s3 = []
         for i in range(len(items_the_s1)):
-            price_the_r1 = items_the_s1[0]['amount']
             loai = items_the_s1[i]['rarity']
-            #if (loai == 2):
-                #total_s1 += 1 
-            if (loai == 1):
-               # total_sr1 += 1
-                if check_sr1 == 0:
-                    price_the_sr1 = items_the_s1[i]['amount']
-                    check_sr1 = 1
-            if (loai == 0):
-                #total_ssr1 += 1
-                if check_ssr1 == 0:
-                    price_the_ssr1 = items_the_s1[i]['amount']
-                    check_ssr1 = 1          
+            loai_s1.append(loai)
         for i in range(len(items_the_s2)):
-            price_the_r2 = items_the_s2[0]['amount']
-            loai =  items_the_s2[i]['rarity']
-            #if (loai == 2):
-                #total_s2 += 1 
-            if (loai == 1):
-                #total_sr2 += 1
-                if check_sr2 == 0:
-                    price_the_sr2 = items_the_s2[i]['amount']
-                    check_sr2 = 1
-            if (loai == 0):
-                #total_ssr2 += 1
-                if check_ssr2 == 0:
-                    price_the_ssr2 = items_the_s2[i]['amount']
-                    check_ssr2 = 1
+            loai = items_the_s2[i]['rarity']
+            loai_s2.append(loai)
         for i in range(len(items_the_s3)):
-            price_the_r3 = items_the_s3[0]['amount']
-            loai =  items_the_s3[i]['rarity']
-            #if (loai == 2):
-                #total_s3 += 1 
-            if (loai == 1):
-                #total_sr3 += 1
-                if check_sr3 == 0:
-                    price_the_sr3 = items_the_s3[i]['amount']
-                    check_sr3 = 1
-            if (loai == 0):
-                #total_ssr3 += 1
-                if check_ssr3 == 0:
-                    price_the_ssr3 = items_the_s3[i]['amount']
-                    check_ssr3 = 1          
+            loai = items_the_s3[i]['rarity']
+            loai_s3.append(loai)
+            
+        #Index S-SR-SSR
+        #Box S1    
+        index_sr1 = loai_s1.index(1)
+        index_ssr1 = loai_s1.index(0)
+        #Box S2   
+        index_sr2 = loai_s2.index(1)
+        index_ssr2 = loai_s2.index(0)
+        #Box S1    
+        index_sr3 = loai_s3.index(1)
+        index_ssr3 = loai_s3.index(0)
+        
+        #Total S-SR-SSR
+        #Box S1
+        total_s1=loai_s1.count(2)
+        total_sr1=loai_s1.count(1)
+        total_ssr1=loai_s1.count(0)
+        #Box S2
+        total_s2=loai_s2.count(2)
+        total_sr2=loai_s2.count(1)
+        total_ssr2=loai_s2.count(0)
+        #Box S3
+        total_s3=loai_s3.count(2)
+        total_sr3=loai_s3.count(1)
+        total_ssr3=loai_s3.count(0)
+        
+        #Price S-SR-SSR
+        #Box S1
+        price_the_sr1 = items_the_s1[index_sr1]['amount']
+        price_the_ssr1 = items_the_s1[index_ssr1]['amount']
+        #Box S1
+        price_the_sr2 = items_the_s2[index_sr2]['amount']
+        price_the_ssr2 = items_the_s2[index_ssr2]['amount']
+        #Box S1
+        price_the_sr3 = items_the_s3[index_sr3]['amount']
+        price_the_ssr3 = items_the_s3[index_ssr3]['amount']
+        
         #print(f'{total_s1} - {total_sr1} - {total_ssr1}')
         #print(f"S1: R {price_the_r1} | SR {price_the_sr1} | SSR {price_the_ssr1} | Box {price_box_s1} ")
         #print(f'{total_s2} - {total_sr2} - {total_ssr2}')
