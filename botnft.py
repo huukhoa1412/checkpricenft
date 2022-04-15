@@ -45,10 +45,10 @@ def action(msg):
     print('Chat:', content_type, chat_type, chat_id)
     command = msg['text']
 
-    #print('Received: %s' % command)
+    print('Received: %s' % command)
 
     # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
-    if command == '/n' or command == '/n@xabang_bot' or command == '/nft' or command == '/nfts':
+    if command == '/n' or command == '/n@xabang_bot' or command == '/nft' or command == '/nfts' or command == '/nfts':
         #Box S1
         items_the_s1 = send_req(2,3,109191979564517376)
         items_box_s1 = send_req(2,2,109191979564517376)
