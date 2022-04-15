@@ -50,12 +50,12 @@ def action(msg):
     # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
     if command == '/n' or command == '/n@xabang_bot' or command == '/nft' or command == '/nfts' or command == '/nfts':
         #Box S1
-        items_the_s1 = send_req(2,3,109191979564517376)
-        items_box_s1 = send_req(2,2,109191979564517376)
+        items_the_s1 = send_req(3,3,109191979564517376)
+        items_box_s1 = send_req(3,2,109191979564517376)
         price_box_s1 = items_box_s1[0]['amount']
         price_the_r1 = items_the_s1[0]['amount'] 
-        items_the_s2 = send_req(2,3,155499473454738432)
-        items_box_s2 = send_req(2,2,155499473454738432)
+        items_the_s2 = send_req(3,3,155499473454738432)
+        items_box_s2 = send_req(3,2,155499473454738432)
         price_box_s2 = items_box_s2[0]['amount']
         price_the_r2 = items_the_s2[0]['amount'] 
         items_the_s3 = send_req(3,3,180885755495849984)
