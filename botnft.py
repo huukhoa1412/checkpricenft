@@ -6,7 +6,7 @@ from telepot.loop import MessageLoop
 from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
 
 
-def send_req(max,id,seial):
+def send_req_1(max,id,seial):
     url = 'https://www.binance.com/bapi/nft/v1/public/nft/market-mystery/mystery-list'
     pre_result = []
 
@@ -39,6 +39,43 @@ def send_req(max,id,seial):
             result.append(j)
 
     return result
+def send_req(max,id,seial):
+    url = 'https://www.binance.com/bapi/nft/v1/public/nft/market-mystery/mystery-list'
+    pre_result = []
+
+    for i in range(1, max):
+
+        req_data = {"page": i,
+                    "size": 100,
+                    "params":
+                        {
+                            "keyword": "",
+                            "nftType": id,
+                            "orderBy": "amount_sort",
+                            "orderType": "1",
+                            "serialNo": [seial],
+                            "tradeType": "0"
+                        }
+                    }
+
+        headers = {
+            'Content-type': 'application/json',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/94.0.4606.85 YaBrowser/21.11.1.932 Yowser/2.5 Safari/537.36'
+        }
+        r = requests.post(url, data=json.dumps(req_data), headers=headers)
+        pre_result.append(r.json()['data']['data'])
+        
+    result = []
+    for i in pre_result:
+        for j in i:
+            result.append(j)
+
+    data_points = 'amount', 'rarity'
+    #amount _ rarity    
+    messages = [{dp: message.get(dp) for dp in data_points}
+                for message in result]
+    return messages
 
 def action(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
