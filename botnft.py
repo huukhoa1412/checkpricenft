@@ -91,7 +91,7 @@ def action(msg):
         items_box_s1 = send_req(1,2,109191979564517376)
         price_box_s1 = items_box_s1[0]['amount']
         price_the_r1 = items_the_s1[0]['amount'] 
-        items_the_s2 = send_req(4,3,155499473454738432)
+        items_the_s2 = send_req(5,3,155499473454738432)
         items_box_s2 = send_req(1,2,155499473454738432)
         price_box_s2 = items_box_s2[0]['amount']
         price_the_r2 = items_the_s2[0]['amount'] 
