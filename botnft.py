@@ -88,15 +88,15 @@ def action(msg):
     if command == '/n' or command == '/n@xabang_bot' or command == '/nft' or command == '/nfts':
         #Box S1
         items_the_s1 = send_req(3,3,109191979564517376)
-        items_box_s1 = send_req(3,2,109191979564517376)
+        items_box_s1 = send_req(1,2,109191979564517376)
         price_box_s1 = items_box_s1[0]['amount']
         price_the_r1 = items_the_s1[0]['amount'] 
-        items_the_s2 = send_req(3,3,155499473454738432)
-        items_box_s2 = send_req(3,2,155499473454738432)
+        items_the_s2 = send_req(4,3,155499473454738432)
+        items_box_s2 = send_req(1,2,155499473454738432)
         price_box_s2 = items_box_s2[0]['amount']
         price_the_r2 = items_the_s2[0]['amount'] 
-        items_the_s3 = send_req(3,3,180885755495849984)
-        items_box_s3 = send_req(3,2,180885755495849984)
+        items_the_s3 = send_req(4,3,180885755495849984)
+        items_box_s3 = send_req(1,2,180885755495849984)
         price_box_s3 = items_box_s3[0]['amount']
         price_the_r3 = items_the_s3[0]['amount'] 
         loai_s1 = []
