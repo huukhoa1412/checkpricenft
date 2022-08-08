@@ -37,6 +37,7 @@ def send_req(seial,loai):
             try:
                 r = requests.post(url, data=json.dumps(req_data), headers=headers)
                 pre_result.append(r.json()['data']['data'])
+                time.sleep(0.5)
                 break
             except TypeError:
                 if tryAgain:
@@ -79,6 +80,7 @@ def send_req_box(seial):
             try:
                 r = requests.post(url, data=json.dumps(req_data), headers=headers)
                 pre_result.append(r.json()['data']['data'])
+                time.sleep(0.5)
                 break
             except TypeError:
                 if tryAgain:
@@ -99,7 +101,7 @@ def action(msg):
 
     print('Received: %s' % command)
 
-    # markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
+    #markup = ReplyKeyboardMarkup(keyboard=[['Time', KeyboardButton(text='NewKey')],["File", "Audio"]])
     if command == '/n' or command == '/n@TopGoalCheckerPriceBot' or command == '/nft' or command == '/nfts':
             telegram_bot.sendMessage (chat_id,'Vui lòng đợi 1 chút')
             #Box S1
@@ -205,7 +207,7 @@ def action(msg):
             #elegram_bot.sendMessage (chat_id, f"S1: R {price_the_r1} {donvi_the_r1}| SR {price_the_sr1} {donvi_the_sr1}| SSR {price_the_ssr1} {donvi_the_ssr1}| Box {price_box_s1} {donvi_box_r1} \nS2: R {price_the_r2} {donvi_the_r2}| SR {price_the_sr2} {donvi_the_sr2}| SSR {price_the_ssr2} {donvi_the_ssr2}| Box {price_box_s2} {donvi_box_r2} \nS3: R {price_the_r3} {donvi_the_r3}| SR {price_the_sr3} {donvi_the_sr3}| SSR {price_the_ssr3} {donvi_the_ssr3}| Box {price_box_s3} {donvi_box_r3}\n")
             telegram_bot.sendMessage (chat_id, f"S1: R {price_the_r1} | SR {price_the_sr1} | SSR {price_the_ssr1} | Box {price_box_s1} \nS2: R {price_the_r2} | SR {price_the_sr2} | SSR {price_the_ssr2} | Box {price_box_s2} \nS3: R {price_the_r3} | SR {price_the_sr3} | SSR {price_the_ssr3} | Box {price_box_s3}\nS4: R {price_the_r4} | SR {price_the_sr4} | SSR {price_the_ssr4} | Box {price_box_s4}")
 
-telegram_bot = telepot.Bot('5395216210:AAEKJynIsSMMXuike2rdaKjLdDyQMFkJ_ig')
+telegram_bot = telepot.Bot('5395216210:AAGIedT-trlQNrkz1L1Ln8kXe-LYHJEECbk')
 print((telegram_bot.getMe()))
 
 MessageLoop(telegram_bot, action).run_as_thread()
